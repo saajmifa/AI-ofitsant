@@ -38,6 +38,12 @@ const uploadsDir = path.join(__dirname, "..", "uploads");
 if (!fs.existsSync(uploadsDir)) fs.mkdirSync(uploadsDir, { recursive: true });
 app.use("/uploads", express.static(uploadsDir));
 
+// Frontend ilovaning tayyor (build qilingan) fayllari shu yerdan
+// beriladi — shunda frontend va backend BITTA manzilda ishlaydi,
+// browser xavfsizlik cheklovlari (CORS/CSP) muammosi bo'lmaydi.
+const publicDir = path.join(__dirname, "..", "public");
+app.use(express.static(publicDir));
+
 const upload = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => cb(null, uploadsDir),

@@ -2,9 +2,5 @@
   "orders": [],
   "calls": [],
   "staffChat": [],
-  "counters": {
-    "order": 1000,
-    "call": 2000,
-    "chat": 3000
-  }
+  "counters": { "order": 1000, "call": 2000, "chat": 3000 }
 }
