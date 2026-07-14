@@ -201,6 +201,53 @@ app.post("/api/staff-chat", (req, res) => {
 // ============================================================
 // Ishga tushirish
 // ============================================================
+// ============================================================
+// AI OFITSANT — Gemini bilan xavfsiz suhbat (bepul tarif)
+// ------------------------------------------------------------
+// Brauzer to'g'ridan-to'g'ri Google serveriga murojaat qilmaydi
+// (bu xavfsiz emas — kalit ko'rinib qolardi). Buning o'rniga
+// brauzer shu manzilga ("/api/ai-chat") murojaat qiladi, server esa
+// o'zining maxfiy kaliti bilan Google Gemini'ga so'rov yuboradi.
+// Google AI Studio'ning bepul tarifi ishlatiladi (kuniga 1500
+// so'rovgacha, karta kerak emas).
+// ============================================================
+app.post("/api/ai-chat", async (req, res) => {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) {
+    return res.status(500).json({ error: "GEMINI_API_KEY sozlanmagan. Railway > Variables bo'limiga qo'shing." });
+  }
+  const { system, messages } = req.body;
+  try {
+    const geminiContents = (messages || []).map((m) => ({
+      role: m.role === "assistant" ? "model" : "user",
+      parts: [{ text: m.content }],
+    }));
+
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: system || "" }] },
+          contents: geminiContents,
+        }),
+      }
+    );
+    const data = await response.json();
+
+    if (!response.ok || data.error) {
+      return res.status(response.status).json({ error: data.error?.message || "Gemini xatosi" });
+    }
+
+    const text = data.candidates?.[0]?.content?.parts?.map((p) => p.text || "").join("") || "";
+    // Frontend Claude javob formatini kutadi — shu ko'rinishga moslab beramiz.
+    res.json({ content: [{ type: "text", text }] });
+  } catch (e) {
+    res.status(500).json({ error: "AI bilan bog'lanib bo'lmadi." });
+  }
+});
+
 const PORT = process.env.PORT || 4000;
 server.listen(PORT, () => {
   console.log(`✅ Server ishga tushdi: http://localhost:${PORT}`);
