@@ -22344,17 +22344,17 @@
           }
         ) })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "px-4 pb-4 -mt-1", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
         "button",
         {
           onClick: () => onAdd(item),
-          className: "absolute bottom-3 right-3 text-[11.5px] bg-black/70 backdrop-blur border border-amber-400/70 text-amber-300 font-medium rounded-full px-3 py-1.5 flex items-center gap-1 hover:bg-amber-500 hover:text-stone-900 transition-colors",
+          className: "w-full text-[12.5px] bg-black/70 backdrop-blur border border-amber-400/70 text-amber-300 font-medium rounded-full px-3 py-2 flex items-center justify-center gap-1 hover:bg-amber-500 hover:text-stone-900 transition-colors",
           children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { size: 12 }),
             " Qo'shish"
           ]
         }
-      )
+      ) })
     ] });
   }
   function CustomerView({ table, cart, setCart, onPlaceOrder, onCallWaiter, orders }) {
