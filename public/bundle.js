@@ -22225,84 +22225,6 @@
     "Zalda mijoz noroziligi kuzatilmoqda",
     "Boshqa muammo"
   ];
-  function DishArt({ id, category, size = 32 }) {
-    const c = CATEGORY_ACCENT[category] || "#f59e0b";
-    const v = "0 0 40 40";
-    switch (id) {
-      case "osh":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M5 20a15 15 0 0030 0z", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ellipse", { cx: "20", cy: "20", rx: "15", ry: "3.2", fill: c, opacity: "0.5" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "15", y: "10", width: "2.6", height: "9", rx: "1.3", fill: "#f97316", transform: "rotate(-18 15 10)" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "21", y: "9", width: "2.6", height: "10", rx: "1.3", fill: "#f97316", transform: "rotate(12 21 9)" })
-        ] });
-      case "lagmon":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M6 21a14 14 0 0028 0z", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M11 21c1.5-3 3-3 4.5 0s3 3 4.5 0 3-3 4.5 0 3 3 4.5 0", stroke: "#fff", strokeWidth: "1.6", fill: "none", strokeLinecap: "round", opacity: "0.85" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "14", cy: "14", r: "1.6", fill: "#fb7185" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "24", cy: "13", r: "1.6", fill: "#34d399" })
-        ] });
-      case "manti":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "13", cy: "24", r: "8", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "24", cy: "22", r: "9", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "30", cy: "27", r: "6", fill: c, opacity: "0.85" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M24 13v9M20 15l4-2 4 2", stroke: "#fff", strokeWidth: "1.4", fill: "none", strokeLinecap: "round" })
-        ] });
-      case "norin":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ellipse", { cx: "20", cy: "24", rx: "15", ry: "8", fill: c, opacity: "0.4" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M9 22c3-4 5 4 8 0s5 4 8 0 5 4 7 0", stroke: c, strokeWidth: "2", fill: "none", strokeLinecap: "round" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "20", cy: "16", r: "2.3", fill: "#f97316" })
-        ] });
-      case "shashlik":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", { x1: "4", y1: "20", x2: "36", y2: "20", stroke: "#a8a29e", strokeWidth: "1.6" }),
-          [9, 16, 23, 30].map((x, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: x - 3, y: "15", width: "6", height: "10", rx: "2", fill: i % 2 ? "#fbbf24" : c }, x))
-        ] });
-      case "somsa":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M20 8l14 24H6z", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M20 8l0 24M13 32l7-12 7 12", stroke: "#fff7ed", strokeWidth: "1.2", fill: "none", opacity: "0.7" })
-        ] });
-      case "achchiq-chuchuk":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "16", cy: "21", r: "9", fill: "#ef4444" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M16 12c1.5 0 3 1.5 3 3", stroke: "#16a34a", strokeWidth: "1.6", fill: "none", strokeLinecap: "round" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ellipse", { cx: "27", cy: "23", rx: "6.5", ry: "7.5", fill: "#e9d5ff", stroke: "#c084fc", strokeWidth: "1" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M27 15.5v15", stroke: "#c084fc", strokeWidth: "0.8" })
-        ] });
-      case "qozon-kabob":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M6 20a14 6 0 0028 0z", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "5", y: "19", width: "30", height: "4", rx: "2", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "17", y: "10", width: "6", height: "3", rx: "1.5", fill: "#a8a29e" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14 15c1-2 2-3 2-5M26 15c-1-2-2-3-2-5", stroke: "#d6d3d1", strokeWidth: "1.3", fill: "none", strokeLinecap: "round" })
-        ] });
-      case "ayron":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M13 9h14l-2 24H15z", fill: "#f5f5f4", stroke: c, strokeWidth: "1.4" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14.3 16h11.4l-1.4 15H15.7z", fill: c, opacity: "0.75" })
-        ] });
-      case "choy":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M8 20a12 8 0 0024 0z", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "8", y: "19", width: "24", height: "3", rx: "1.5", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M32 19c4-1 4 6 0 6", stroke: c, strokeWidth: "2", fill: "none" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "17", y: "10", width: "6", height: "4", rx: "1", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M20 10c0-2-2-2-2-4", stroke: "#a8a29e", strokeWidth: "1.2", fill: "none", strokeLinecap: "round" })
-        ] });
-      case "halva":
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", { width: size, height: size, viewBox: v, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", { x: "7", y: "12", width: "26", height: "16", rx: "2", fill: c }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M7 20h26M13 12v16M20 12v16M27 12v16", stroke: "#fff", strokeWidth: "0.9", opacity: "0.6" }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "20", cy: "20", r: "1.4", fill: "#78350f" })
-        ] });
-      default:
-        return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", { width: size, height: size, viewBox: v, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", { cx: "20", cy: "20", r: "14", fill: c }) });
-    }
-  }
   function formatSum(n) {
     return n.toLocaleString("uz-UZ") + " so'm";
   }
@@ -22401,12 +22323,17 @@
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "relative w-28 shrink-0 flex items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "div",
           {
-            className: "w-24 h-24 rounded-full flex items-center justify-center",
-            style: {
-              background: `radial-gradient(circle at 35% 30%, ${accent}33, ${accent}0d 70%)`,
-              boxShadow: `0 0 0 1px ${accent}40 inset`
-            },
-            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DishArt, { id: item.id, category: item.category, size: 46 })
+            className: "w-24 h-24 rounded-full overflow-hidden",
+            style: { boxShadow: `0 0 0 2px ${accent}55` },
+            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              "img",
+              {
+                src: `/dishes/${item.id}.jpg`,
+                alt: item.name,
+                loading: "lazy",
+                className: "w-full h-full object-cover"
+              }
+            )
           }
         ) })
       ] }),
@@ -22555,9 +22482,9 @@
                     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
                       "span",
                       {
-                        className: "w-7 h-7 rounded-lg flex items-center justify-center shrink-0",
-                        style: { backgroundColor: `${CATEGORY_ACCENT[it.category]}22` },
-                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DishArt, { id: it.id, category: it.category, size: 18 })
+                        className: "w-7 h-7 rounded-full overflow-hidden shrink-0",
+                        style: { boxShadow: `0 0 0 1px ${CATEGORY_ACCENT[it.category]}55` },
+                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: `/dishes/${it.id}.jpg`, alt: it.name, className: "w-full h-full object-cover" })
                       }
                     ),
                     it.name
