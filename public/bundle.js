@@ -22320,18 +22320,25 @@
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "relative w-28 shrink-0 flex items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flexShrink: 0, width: 92, display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
           "div",
           {
-            className: "w-24 h-24 rounded-full overflow-hidden",
-            style: { boxShadow: `0 0 0 2px ${accent}55` },
+            style: {
+              width: 88,
+              height: 88,
+              minWidth: 88,
+              minHeight: 88,
+              borderRadius: "9999px",
+              overflow: "hidden",
+              boxShadow: `0 0 0 2px ${accent}55`
+            },
             children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
               "img",
               {
                 src: `/dishes/${item.id}.jpg`,
                 alt: item.name,
                 loading: "lazy",
-                className: "w-full h-full object-cover"
+                style: { width: "100%", height: "100%", objectFit: "cover", display: "block" }
               }
             )
           }
@@ -22482,9 +22489,17 @@
                     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
                       "span",
                       {
-                        className: "w-7 h-7 rounded-full overflow-hidden shrink-0",
-                        style: { boxShadow: `0 0 0 1px ${CATEGORY_ACCENT[it.category]}55` },
-                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: `/dishes/${it.id}.jpg`, alt: it.name, className: "w-full h-full object-cover" })
+                        style: {
+                          width: 28,
+                          height: 28,
+                          minWidth: 28,
+                          minHeight: 28,
+                          borderRadius: "9999px",
+                          overflow: "hidden",
+                          flexShrink: 0,
+                          boxShadow: `0 0 0 1px ${CATEGORY_ACCENT[it.category]}55`
+                        },
+                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: `/dishes/${it.id}.jpg`, alt: it.name, style: { width: "100%", height: "100%", objectFit: "cover", display: "block" } })
                       }
                     ),
                     it.name
