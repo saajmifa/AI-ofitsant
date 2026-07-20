@@ -21928,21 +21928,8 @@
   ];
   var History = createLucideIcon("history", __iconNode9);
 
-  // node_modules/lucide-react/dist/esm/icons/leaf.mjs
-  var __iconNode10 = [
-    [
-      "path",
-      {
-        d: "M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z",
-        key: "nnexq3"
-      }
-    ],
-    ["path", { d: "M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12", key: "mt58a7" }]
-  ];
-  var Leaf = createLucideIcon("leaf", __iconNode10);
-
   // node_modules/lucide-react/dist/esm/icons/message-circle.mjs
-  var __iconNode11 = [
+  var __iconNode10 = [
     [
       "path",
       {
@@ -21951,21 +21938,21 @@
       }
     ]
   ];
-  var MessageCircle = createLucideIcon("message-circle", __iconNode11);
+  var MessageCircle = createLucideIcon("message-circle", __iconNode10);
 
   // node_modules/lucide-react/dist/esm/icons/minus.mjs
-  var __iconNode12 = [["path", { d: "M5 12h14", key: "1ays0h" }]];
-  var Minus = createLucideIcon("minus", __iconNode12);
+  var __iconNode11 = [["path", { d: "M5 12h14", key: "1ays0h" }]];
+  var Minus = createLucideIcon("minus", __iconNode11);
 
   // node_modules/lucide-react/dist/esm/icons/plus.mjs
-  var __iconNode13 = [
+  var __iconNode12 = [
     ["path", { d: "M5 12h14", key: "1ays0h" }],
     ["path", { d: "M12 5v14", key: "s699le" }]
   ];
-  var Plus = createLucideIcon("plus", __iconNode13);
+  var Plus = createLucideIcon("plus", __iconNode12);
 
   // node_modules/lucide-react/dist/esm/icons/printer.mjs
-  var __iconNode14 = [
+  var __iconNode13 = [
     [
       "path",
       {
@@ -21976,10 +21963,10 @@
     ["path", { d: "M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6", key: "1itne7" }],
     ["rect", { x: "6", y: "14", width: "12", height: "8", rx: "1", key: "1ue0tg" }]
   ];
-  var Printer = createLucideIcon("printer", __iconNode14);
+  var Printer = createLucideIcon("printer", __iconNode13);
 
   // node_modules/lucide-react/dist/esm/icons/qr-code.mjs
-  var __iconNode15 = [
+  var __iconNode14 = [
     ["rect", { width: "5", height: "5", x: "3", y: "3", rx: "1", key: "1tu5fj" }],
     ["rect", { width: "5", height: "5", x: "16", y: "3", rx: "1", key: "1v8r4q" }],
     ["rect", { width: "5", height: "5", x: "3", y: "16", rx: "1", key: "1x03jg" }],
@@ -21993,7 +21980,14 @@
     ["path", { d: "M21 12v.01", key: "1lwtk9" }],
     ["path", { d: "M12 21v-1", key: "1880an" }]
   ];
-  var QrCode = createLucideIcon("qr-code", __iconNode15);
+  var QrCode = createLucideIcon("qr-code", __iconNode14);
+
+  // node_modules/lucide-react/dist/esm/icons/search.mjs
+  var __iconNode15 = [
+    ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
+    ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
+  ];
+  var Search = createLucideIcon("search", __iconNode15);
 
   // node_modules/lucide-react/dist/esm/icons/send.mjs
   var __iconNode16 = [
@@ -22205,6 +22199,13 @@
     "Ichimlik": "#38bdf8",
     "Shirinlik": "#e879f9"
   };
+  var CATEGORY_EMOJI = {
+    "Issiq taom": "\u{1F35A}",
+    "Milliy taom": "\u{1F362}",
+    "Salat": "\u{1F957}",
+    "Ichimlik": "\u{1F964}",
+    "Shirinlik": "\u{1F36F}"
+  };
   var PAYMENT_METHODS = [
     { id: "naqd", label: "Naqd pul", Icon: Wallet },
     { id: "karta", label: "Plastik karta", Icon: CreditCard },
@@ -22304,58 +22305,69 @@
       )
     ] }) });
   }
-  function MenuItemCard({ item, onAdd }) {
-    const accent = CATEGORY_ACCENT[item.category];
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative bg-black/40 backdrop-blur-sm rounded-2xl border border-amber-500/25 overflow-hidden", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex gap-3 p-4 pr-2", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex-1 min-w-0", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex items-start justify-between gap-2", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "font-serif text-stone-50 text-[16px] leading-tight", children: item.name }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-400 text-[12.5px] mt-1.5 leading-snug pr-2", children: item.desc }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex items-center gap-2 mt-2.5", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-amber-400 text-[15px] font-serif font-medium whitespace-nowrap", children: formatSum(item.price) }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center gap-2 mt-2 flex-wrap", children: [
-            item.spice > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "inline-flex items-center gap-0.5 text-[11px] text-rose-400", children: Array.from({ length: item.spice }).map((_, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Flame, { size: 11 }, i)) }),
-            item.tags.includes("Vegetarian") && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "inline-flex items-center gap-1 text-[11px] text-emerald-400", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Leaf, { size: 11 }),
-              "Vegetarian"
+  function MenuItemCard({ item, qty, onAdd, onIncrease, onDecrease }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+      "div",
+      {
+        className: "group relative bg-white rounded-3xl border border-neutral-200/70 overflow-hidden shadow-sm hover:shadow-md transition-shadow",
+        style: { position: "relative" },
+        children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { position: "relative", width: "100%", aspectRatio: "16/10", overflow: "hidden", background: "#f5f5f4" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            "img",
+            {
+              src: `/dishes/${item.id}.jpg`,
+              alt: item.name,
+              loading: "lazy",
+              style: { width: "100%", height: "100%", objectFit: "cover", display: "block" }
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "p-4", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex flex-wrap gap-1.5 mb-2", children: [
+              item.tags.map((tag) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-[10px] font-medium bg-neutral-100 text-neutral-600 px-2 py-0.5 rounded-lg", children: tag }, tag)),
+              item.spice > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "text-[10px] font-medium bg-rose-50 text-rose-600 px-2 py-0.5 rounded-lg inline-flex items-center gap-0.5", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Flame, { size: 10 }),
+                " Achchiq"
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "font-serif text-[17px] font-bold text-neutral-900 leading-tight", children: item.name }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-neutral-500 text-[12px] mt-1 leading-snug", style: { display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }, children: item.desc }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between mt-3.5 pt-3 border-t border-neutral-100", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex flex-col", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-[9px] font-mono tracking-wider text-neutral-400 font-semibold uppercase", children: "Narxi" }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "font-mono font-black text-neutral-900 text-[15px]", children: formatSum(item.price) })
+              ] }),
+              qty === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+                "button",
+                {
+                  onClick: () => onAdd(item),
+                  style: {
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    background: "#0a0a0a",
+                    color: "#fff",
+                    padding: "8px 14px",
+                    borderRadius: 12,
+                    fontSize: 12,
+                    fontWeight: 600,
+                    border: "none",
+                    cursor: "pointer"
+                  },
+                  children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { size: 13 }),
+                    " Qo'shish"
+                  ]
+                }
+              ) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", background: "#f5f5f4", border: "1px solid #e5e5e5", borderRadius: 12, overflow: "hidden" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => onDecrease(item.id), style: { width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", background: "transparent", border: "none", cursor: "pointer", color: "#404040" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Minus, { size: 13 }) }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: 24, textAlign: "center", fontFamily: "monospace", fontSize: 12, fontWeight: 700, color: "#0a0a0a" }, children: qty }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => onIncrease(item.id), style: { width: 32, height: 32, display: "flex", alignItems: "center", justifyContent: "center", background: "transparent", border: "none", cursor: "pointer", color: "#404040" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { size: 13 }) })
+              ] })
             ] })
           ] })
-        ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flexShrink: 0, width: 92, display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-          "div",
-          {
-            style: {
-              width: 88,
-              height: 88,
-              minWidth: 88,
-              minHeight: 88,
-              borderRadius: "9999px",
-              overflow: "hidden",
-              boxShadow: `0 0 0 2px ${accent}55`
-            },
-            children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-              "img",
-              {
-                src: `/dishes/${item.id}.jpg`,
-                alt: item.name,
-                loading: "lazy",
-                style: { width: "100%", height: "100%", objectFit: "cover", display: "block" }
-              }
-            )
-          }
-        ) })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "px-4 pb-4 -mt-1", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-        "button",
-        {
-          onClick: () => onAdd(item),
-          className: "w-full text-[12.5px] bg-black/70 backdrop-blur border border-amber-400/70 text-amber-300 font-medium rounded-full px-3 py-2 flex items-center justify-center gap-1 hover:bg-amber-500 hover:text-stone-900 transition-colors",
-          children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { size: 12 }),
-            " Qo'shish"
-          ]
-        }
-      ) })
-    ] });
+        ]
+      }
+    );
   }
   function CustomerView({ table, cart, setCart, onPlaceOrder, onCallWaiter, orders }) {
     const addToCart = (item) => {
@@ -22386,6 +22398,18 @@
     const [callConfirmed, setCallConfirmed] = (0, import_react4.useState)(false);
     const [showHistory, setShowHistory] = (0, import_react4.useState)(false);
     const [reorderConfirmed, setReorderConfirmed] = (0, import_react4.useState)(false);
+    const [selectedCategory, setSelectedCategory] = (0, import_react4.useState)("Barchasi");
+    const [searchQuery, setSearchQuery] = (0, import_react4.useState)("");
+    const categoryPills = [
+      { name: "Barchasi", icon: "\u{1F37D}\uFE0F" },
+      ...CATEGORIES.map((c) => ({ name: c, icon: CATEGORY_EMOJI[c] || "\u{1F374}" }))
+    ];
+    const filteredMenu = MENU.filter((d) => {
+      const matchCat = selectedCategory === "Barchasi" || d.category === selectedCategory;
+      const q = searchQuery.toLowerCase();
+      const matchSearch = d.name.toLowerCase().includes(q) || d.desc.toLowerCase().includes(q);
+      return matchCat && matchSearch;
+    });
     const myOrders = (orders || []).filter((o) => o.table === table);
     const reorder = (order) => {
       setCart((prev) => {
@@ -22406,28 +22430,36 @@
       setCallConfirmed(true);
       setTimeout(() => setCallConfirmed(false), 3e3);
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-      "div",
-      {
-        className: "relative pb-24 min-h-screen",
-        style: {
-          background: "radial-gradient(circle at 15% 8%, rgba(212,175,55,0.14), transparent 42%), radial-gradient(circle at 85% 95%, rgba(120,53,15,0.28), transparent 55%), #0b0b0d"
-        },
-        children: [
-          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "px-4 pt-5 pb-1 flex items-start justify-between", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-amber-400/80 text-[11px] tracking-widest", children: "Stol" }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-50 font-serif text-2xl", children: [
-                "\u2116 ",
-                table
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative pb-24 min-h-screen", style: { background: "#fbfbfa" }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+        "div",
+        {
+          className: "sticky top-0 z-20",
+          style: { background: "rgba(255,255,255,0.85)", backdropFilter: "blur(10px)", borderBottom: "1px solid #f0f0ee" },
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "px-4 py-3 flex items-center justify-between", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center gap-2.5", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { background: "#0a0a0a", color: "#d4af37", padding: 9, borderRadius: 12, display: "flex", alignItems: "center", justifyContent: "center" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Utensils, { size: 17 }) }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "font-serif text-[17px] font-bold text-neutral-900 leading-tight", children: "Online Ofitsant" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-[9.5px] font-mono tracking-widest text-amber-700 uppercase font-semibold", children: "Premium xizmat" })
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", background: "#0a0a0a", color: "#fff", borderRadius: 12, padding: "6px 12px" }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { width: 6, height: 6, background: "#34d399", borderRadius: "9999px", marginRight: 8 } }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 10, color: "#a3a3a3", fontWeight: 700, marginRight: 4 }, children: "STOL" }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { style: { fontSize: 13, fontWeight: 800, fontFamily: "monospace", color: "#d4af37" }, children: [
+                  "\u2116",
+                  table
+                ] })
               ] })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "px-4 pb-3 flex items-center gap-2", children: [
               /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
                 "button",
                 {
                   onClick: () => setShowHistory(true),
-                  className: "flex items-center gap-1.5 bg-black/40 backdrop-blur border border-amber-400/40 text-amber-300/90 text-[11.5px] font-medium rounded-full px-3 py-2",
+                  className: "flex items-center gap-1.5 bg-white border border-neutral-200 text-neutral-600 text-[11.5px] font-semibold rounded-xl px-3 py-2",
                   children: [
                     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(History, { size: 13 }),
                     " Tarix"
@@ -22438,7 +22470,7 @@
                 "button",
                 {
                   onClick: () => setShowCallModal(true),
-                  className: "flex items-center gap-1.5 bg-black/40 backdrop-blur border border-amber-400/40 text-amber-300/90 text-[11.5px] font-medium rounded-full px-3.5 py-2",
+                  className: "flex items-center gap-1.5 bg-neutral-900 hover:bg-black text-white text-[11.5px] font-semibold rounded-xl px-3.5 py-2",
                   children: [
                     /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bell, { size: 13 }),
                     " Ofitsant chaqirish"
@@ -22446,196 +22478,244 @@
                 }
               )
             ] })
-          ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "px-4 pt-2 pb-1", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-amber-400/90 text-[10.5px] tracking-[0.2em] uppercase", children: "Premium xizmat" }) }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "px-4 pb-2", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "text-stone-500 text-xs flex items-center gap-1", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { size: 13, className: "text-emerald-400" }),
-            " QR orqali ulandi"
-          ] }) }),
-          CATEGORIES.map((cat) => {
-            const list = MENU.filter((m) => m.category === cat);
-            if (!list.length) return null;
-            return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "mb-6", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "px-4 text-stone-50 font-serif text-xl tracking-wide mb-3 uppercase", children: cat }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "px-4 space-y-3", children: list.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MenuItemCard, { item, onAdd: addToCart }, item.id)) })
-            ] }, cat);
-          }),
-          items.length > 0 && !showCart && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+          ]
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "px-4 pt-4", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "relative", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { position: "absolute", top: 0, bottom: 0, left: 14, display: "flex", alignItems: "center", color: "#a3a3a3", pointerEvents: "none" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { size: 15 }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            "input",
+            {
+              value: searchQuery,
+              onChange: (e) => setSearchQuery(e.target.value),
+              placeholder: "Taom yoki ichimlik qidirish...",
+              className: "w-full bg-white border border-neutral-200 rounded-full text-[13px] text-neutral-800 placeholder-neutral-400 outline-none focus:border-amber-400 focus:ring-4 focus:ring-amber-400/10",
+              style: { paddingLeft: 40, paddingRight: 16, paddingTop: 10, paddingBottom: 10 }
+            }
+          )
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "flex items-center gap-2 overflow-x-auto pb-1 pt-3", style: { scrollbarWidth: "none" }, children: categoryPills.map((cat) => {
+          const active = selectedCategory === cat.name;
+          return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
             "button",
             {
-              onClick: () => setShowCart(true),
-              className: "fixed bottom-5 left-4 right-4 max-w-md mx-auto bg-amber-500 hover:bg-amber-400 text-stone-900 rounded-full py-3.5 px-5 flex items-center justify-between font-medium shadow-xl z-30",
+              onClick: () => setSelectedCategory(cat.name),
+              className: "whitespace-nowrap flex items-center gap-1.5 rounded-full text-[12px] font-semibold",
+              style: {
+                padding: "8px 14px",
+                background: active ? "#0a0a0a" : "#fff",
+                color: active ? "#fff" : "#525252",
+                border: active ? "1px solid #0a0a0a" : "1px solid #e5e5e5",
+                flexShrink: 0
+              },
               children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "flex items-center gap-2", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShoppingCart, { size: 18 }),
-                  " Savatcha (",
-                  items.reduce((s, i) => s + i.qty, 0),
-                  ")"
-                ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: formatSum(total) })
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: cat.icon }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: cat.name })
+              ]
+            },
+            cat.name
+          );
+        }) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "px-4 pt-4", children: filteredMenu.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "text-center py-16 bg-white rounded-3xl border border-neutral-100", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-neutral-500 text-sm", children: "Siz izlagan taom topilmadi." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          "button",
+          {
+            onClick: () => {
+              setSearchQuery("");
+              setSelectedCategory("Barchasi");
+            },
+            className: "mt-3 text-xs font-bold text-amber-700",
+            children: "Barcha taomlarni ko'rish"
+          }
+        )
+      ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid grid-cols-1 sm:grid-cols-2 gap-4", children: filteredMenu.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        MenuItemCard,
+        {
+          item,
+          qty: cart[item.id]?.qty || 0,
+          onAdd: addToCart,
+          onIncrease: (id) => changeQty(id, 1),
+          onDecrease: (id) => changeQty(id, -1)
+        },
+        item.id
+      )) }) }),
+      items.length > 0 && !showCart && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+        "button",
+        {
+          onClick: () => setShowCart(true),
+          className: "fixed bottom-5 left-4 right-4 max-w-md mx-auto bg-amber-500 hover:bg-amber-400 text-stone-900 rounded-full py-3.5 px-5 flex items-center justify-between font-medium shadow-xl z-30",
+          children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "flex items-center gap-2", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ShoppingCart, { size: 18 }),
+              " Savatcha (",
+              items.reduce((s, i) => s + i.qty, 0),
+              ")"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: formatSum(total) })
+          ]
+        }
+      ),
+      showCart && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "fixed inset-0 z-40 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-900 w-full sm:max-w-md sm:rounded-2xl max-h-[85vh] flex flex-col border border-stone-700", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between px-4 py-3 border-b border-stone-700", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "font-serif text-stone-100 text-lg", children: "Savatcha" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowCart(false), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 20, className: "text-stone-400" }) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "overflow-y-auto px-4 py-3 space-y-3 flex-1", children: [
+          items.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-500 text-sm text-center py-8", children: "Savatcha bo'sh" }),
+          items.map((it) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-800/60 rounded-xl p-3", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "text-stone-100 text-sm flex items-center gap-2", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                  "span",
+                  {
+                    style: {
+                      width: 28,
+                      height: 28,
+                      minWidth: 28,
+                      minHeight: 28,
+                      borderRadius: "9999px",
+                      overflow: "hidden",
+                      flexShrink: 0,
+                      boxShadow: `0 0 0 1px ${CATEGORY_ACCENT[it.category]}55`
+                    },
+                    children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: `/dishes/${it.id}.jpg`, alt: it.name, style: { width: "100%", height: "100%", objectFit: "cover", display: "block" } })
+                  }
+                ),
+                it.name
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => changeQty(it.id, -1), className: "w-6 h-6 rounded-full bg-stone-700 flex items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Minus, { size: 12, className: "text-stone-200" }) }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-stone-100 text-sm w-4 text-center", children: it.qty }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => changeQty(it.id, 1), className: "w-6 h-6 rounded-full bg-stone-700 flex items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { size: 12, className: "text-stone-200" }) })
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              "input",
+              {
+                value: it.note,
+                onChange: (e) => setNote(it.id, e.target.value),
+                placeholder: "Maxsus izoh (masalan: tuz kam solinsin)",
+                className: "mt-2 w-full bg-stone-900/60 border border-stone-700 rounded-lg px-2.5 py-1.5 text-xs text-stone-200 placeholder-stone-500 outline-none focus:border-amber-500"
+              }
+            )
+          ] }, it.id))
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "px-4 py-3.5 border-t border-stone-700", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-400 text-xs mb-2", children: "To'lov usuli" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid grid-cols-2 gap-2 mb-3.5", children: PAYMENT_METHODS.map((pm) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+            "button",
+            {
+              onClick: () => setPaymentMethod(pm.id),
+              className: `flex items-center gap-2 rounded-xl px-3 py-2 text-xs border ${paymentMethod === pm.id ? "border-amber-500 bg-amber-500/10 text-amber-300" : "border-stone-700 text-stone-400"}`,
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(pm.Icon, { size: 14 }),
+                " ",
+                pm.label
+              ]
+            },
+            pm.id
+          )) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex justify-between text-stone-200 mb-3", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Jami" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "font-medium", children: formatSum(total) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+            "button",
+            {
+              disabled: items.length === 0,
+              onClick: () => {
+                onPlaceOrder(items, paymentMethod);
+                setShowCart(false);
+              },
+              className: "w-full bg-amber-500 disabled:bg-stone-700 disabled:text-stone-500 hover:bg-amber-400 text-stone-900 font-medium rounded-full py-3 flex items-center justify-center gap-2",
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Printer, { size: 16 }),
+                " Buyurtma berish"
               ]
             }
-          ),
-          showCart && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "fixed inset-0 z-40 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-900 w-full sm:max-w-md sm:rounded-2xl max-h-[85vh] flex flex-col border border-stone-700", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between px-4 py-3 border-b border-stone-700", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "font-serif text-stone-100 text-lg", children: "Savatcha" }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowCart(false), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 20, className: "text-stone-400" }) })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "overflow-y-auto px-4 py-3 space-y-3 flex-1", children: [
-              items.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-500 text-sm text-center py-8", children: "Savatcha bo'sh" }),
-              items.map((it) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-800/60 rounded-xl p-3", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "text-stone-100 text-sm flex items-center gap-2", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                      "span",
-                      {
-                        style: {
-                          width: 28,
-                          height: 28,
-                          minWidth: 28,
-                          minHeight: 28,
-                          borderRadius: "9999px",
-                          overflow: "hidden",
-                          flexShrink: 0,
-                          boxShadow: `0 0 0 1px ${CATEGORY_ACCENT[it.category]}55`
-                        },
-                        children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: `/dishes/${it.id}.jpg`, alt: it.name, style: { width: "100%", height: "100%", objectFit: "cover", display: "block" } })
-                      }
-                    ),
-                    it.name
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center gap-2", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => changeQty(it.id, -1), className: "w-6 h-6 rounded-full bg-stone-700 flex items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Minus, { size: 12, className: "text-stone-200" }) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-stone-100 text-sm w-4 text-center", children: it.qty }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => changeQty(it.id, 1), className: "w-6 h-6 rounded-full bg-stone-700 flex items-center justify-center", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Plus, { size: 12, className: "text-stone-200" }) })
-                  ] })
+          )
+        ] })
+      ] }) }),
+      showCallModal && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "fixed inset-0 z-40 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-900 w-full sm:max-w-sm sm:rounded-2xl border border-stone-700", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between px-4 py-3 border-b border-stone-700", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", { className: "font-serif text-stone-100 text-lg flex items-center gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bell, { size: 17, className: "text-amber-400" }),
+            " Ofitsant chaqirish"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowCallModal(false), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 20, className: "text-stone-400" }) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "p-4 space-y-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-400 text-xs mb-1", children: [
+            "Stol \u2116",
+            table,
+            " uchun sababni tanlang"
+          ] }),
+          CALL_REASONS.map((reason) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            "button",
+            {
+              onClick: () => handleCall(reason),
+              className: "w-full text-left bg-stone-800/70 hover:bg-stone-800 border border-stone-700 rounded-xl px-4 py-3 text-sm text-stone-100",
+              children: reason
+            },
+            reason
+          ))
+        ] })
+      ] }) }),
+      callConfirmed && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-emerald-600 text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 max-w-[90%]", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BellRing, { size: 15 }),
+        " Ofitsant xabardor qilindi"
+      ] }),
+      showHistory && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "fixed inset-0 z-40 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-900 w-full sm:max-w-md sm:rounded-2xl max-h-[85vh] flex flex-col border border-stone-700", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between px-4 py-3 border-b border-stone-700", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", { className: "font-serif text-stone-100 text-lg flex items-center gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(History, { size: 17, className: "text-amber-400" }),
+            " Buyurtmalar tarixi"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowHistory(false), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 20, className: "text-stone-400" }) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "overflow-y-auto px-4 py-3 space-y-3 flex-1", children: [
+          myOrders.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-500 text-sm text-center py-8", children: "Bu stolda hali buyurtma berilmagan" }),
+          myOrders.map((o) => {
+            const oTotal = o.items.reduce((s, it) => s + it.price * it.qty, 0);
+            return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-800/60 rounded-xl p-3.5", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between mb-1.5", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-100 text-sm font-medium", children: [
+                  "Buyurtma \u2116",
+                  o.id
                 ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-500 text-[11px] flex items-center gap-1", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { size: 10 }),
+                  o.time
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "space-y-1 mb-2.5", children: o.items.map((it) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-400 text-xs", children: [
+                it.qty,
+                "x ",
+                it.name
+              ] }, it.id)) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-200 text-sm font-medium", children: formatSum(oTotal) }),
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                  "input",
+                  "button",
                   {
-                    value: it.note,
-                    onChange: (e) => setNote(it.id, e.target.value),
-                    placeholder: "Maxsus izoh (masalan: tuz kam solinsin)",
-                    className: "mt-2 w-full bg-stone-900/60 border border-stone-700 rounded-lg px-2.5 py-1.5 text-xs text-stone-200 placeholder-stone-500 outline-none focus:border-amber-500"
+                    onClick: () => reorder(o),
+                    className: "bg-amber-500 hover:bg-amber-400 text-stone-900 text-xs font-medium rounded-full px-3.5 py-1.5",
+                    children: "Qayta buyurtma berish"
                   }
                 )
-              ] }, it.id))
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "px-4 py-3.5 border-t border-stone-700", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-400 text-xs mb-2", children: "To'lov usuli" }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid grid-cols-2 gap-2 mb-3.5", children: PAYMENT_METHODS.map((pm) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-                "button",
-                {
-                  onClick: () => setPaymentMethod(pm.id),
-                  className: `flex items-center gap-2 rounded-xl px-3 py-2 text-xs border ${paymentMethod === pm.id ? "border-amber-500 bg-amber-500/10 text-amber-300" : "border-stone-700 text-stone-400"}`,
-                  children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(pm.Icon, { size: 14 }),
-                    " ",
-                    pm.label
-                  ]
-                },
-                pm.id
-              )) }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex justify-between text-stone-200 mb-3", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Jami" }),
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "font-medium", children: formatSum(total) })
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
-                "button",
-                {
-                  disabled: items.length === 0,
-                  onClick: () => {
-                    onPlaceOrder(items, paymentMethod);
-                    setShowCart(false);
-                  },
-                  className: "w-full bg-amber-500 disabled:bg-stone-700 disabled:text-stone-500 hover:bg-amber-400 text-stone-900 font-medium rounded-full py-3 flex items-center justify-center gap-2",
-                  children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Printer, { size: 16 }),
-                    " Buyurtma berish"
-                  ]
-                }
-              )
-            ] })
-          ] }) }),
-          showCallModal && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "fixed inset-0 z-40 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-900 w-full sm:max-w-sm sm:rounded-2xl border border-stone-700", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between px-4 py-3 border-b border-stone-700", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", { className: "font-serif text-stone-100 text-lg flex items-center gap-2", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bell, { size: 17, className: "text-amber-400" }),
-                " Ofitsant chaqirish"
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowCallModal(false), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 20, className: "text-stone-400" }) })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "p-4 space-y-2", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-400 text-xs mb-1", children: [
-                "Stol \u2116",
-                table,
-                " uchun sababni tanlang"
-              ] }),
-              CALL_REASONS.map((reason) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                "button",
-                {
-                  onClick: () => handleCall(reason),
-                  className: "w-full text-left bg-stone-800/70 hover:bg-stone-800 border border-stone-700 rounded-xl px-4 py-3 text-sm text-stone-100",
-                  children: reason
-                },
-                reason
-              ))
-            ] })
-          ] }) }),
-          callConfirmed && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-emerald-600 text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 max-w-[90%]", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BellRing, { size: 15 }),
-            " Ofitsant xabardor qilindi"
-          ] }),
-          showHistory && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "fixed inset-0 z-40 bg-black/70 flex items-end sm:items-center justify-center p-0 sm:p-4", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-900 w-full sm:max-w-md sm:rounded-2xl max-h-[85vh] flex flex-col border border-stone-700", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between px-4 py-3 border-b border-stone-700", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h3", { className: "font-serif text-stone-100 text-lg flex items-center gap-2", children: [
-                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(History, { size: 17, className: "text-amber-400" }),
-                " Buyurtmalar tarixi"
-              ] }),
-              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { onClick: () => setShowHistory(false), children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { size: 20, className: "text-stone-400" }) })
-            ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "overflow-y-auto px-4 py-3 space-y-3 flex-1", children: [
-              myOrders.length === 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-500 text-sm text-center py-8", children: "Bu stolda hali buyurtma berilmagan" }),
-              myOrders.map((o) => {
-                const oTotal = o.items.reduce((s, it) => s + it.price * it.qty, 0);
-                return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "bg-stone-800/60 rounded-xl p-3.5", children: [
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between mb-1.5", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-100 text-sm font-medium", children: [
-                      "Buyurtma \u2116",
-                      o.id
-                    ] }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-500 text-[11px] flex items-center gap-1", children: [
-                      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Clock, { size: 10 }),
-                      o.time
-                    ] })
-                  ] }),
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "space-y-1 mb-2.5", children: o.items.map((it) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-400 text-xs", children: [
-                    it.qty,
-                    "x ",
-                    it.name
-                  ] }, it.id)) }),
-                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between", children: [
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "text-stone-200 text-sm font-medium", children: formatSum(oTotal) }),
-                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
-                      "button",
-                      {
-                        onClick: () => reorder(o),
-                        className: "bg-amber-500 hover:bg-amber-400 text-stone-900 text-xs font-medium rounded-full px-3.5 py-1.5",
-                        children: "Qayta buyurtma berish"
-                      }
-                    )
-                  ] })
-                ] }, o.id);
-              })
-            ] })
-          ] }) }),
-          reorderConfirmed && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-emerald-600 text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 max-w-[90%]", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { size: 15 }),
-            " Taomlar savatchaga qo'shildi"
-          ] })
-        ]
-      }
-    );
+              ] })
+            ] }, o.id);
+          })
+        ] })
+      ] }) }),
+      reorderConfirmed && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "fixed top-16 left-1/2 -translate-x-1/2 z-50 bg-emerald-600 text-white text-sm font-medium px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 max-w-[90%]", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CircleCheck, { size: 15 }),
+        " Taomlar savatchaga qo'shildi"
+      ] })
+    ] });
   }
   function KitchenTicket({ order, onAdvance }) {
     const statusFlow = ["Yangi", "Tayyorlanmoqda", "Tayyor"];
@@ -23439,12 +23519,12 @@ lucide-react/dist/esm/icons/clock.mjs:
 lucide-react/dist/esm/icons/credit-card.mjs:
 lucide-react/dist/esm/icons/flame.mjs:
 lucide-react/dist/esm/icons/history.mjs:
-lucide-react/dist/esm/icons/leaf.mjs:
 lucide-react/dist/esm/icons/message-circle.mjs:
 lucide-react/dist/esm/icons/minus.mjs:
 lucide-react/dist/esm/icons/plus.mjs:
 lucide-react/dist/esm/icons/printer.mjs:
 lucide-react/dist/esm/icons/qr-code.mjs:
+lucide-react/dist/esm/icons/search.mjs:
 lucide-react/dist/esm/icons/send.mjs:
 lucide-react/dist/esm/icons/shopping-cart.mjs:
 lucide-react/dist/esm/icons/smartphone.mjs:
@@ -23454,7 +23534,7 @@ lucide-react/dist/esm/icons/wallet.mjs:
 lucide-react/dist/esm/icons/x.mjs:
 lucide-react/dist/esm/lucide-react.mjs:
   (**
-   * @license lucide-react v1.24.0 - ISC
+   * @license lucide-react v1.25.0 - ISC
    *
    * This source code is licensed under the ISC license.
    * See the LICENSE file in the root directory of this source tree.

@@ -42,20 +42,6 @@ app.use("/uploads", express.static(uploadsDir));
 // beriladi — shunda frontend va backend BITTA manzilda ishlaydi,
 // browser xavfsizlik cheklovlari (CORS/CSP) muammosi bo'lmaydi.
 const publicDir = path.join(__dirname, "..", "public");
-
-// Mijoz (customer) paneli endi yangi, alohida dizaynli ilova
-// ("public/client") orqali beriladi. Admin, oshxona va kuzatuvchi
-// panellari esa eski ilovada (?role=admin / kitchen / monitor)
-// o'zgarishsiz qolaveradi — shu sabab ikkalasini ham saqlab, "/"
-// manzilida rolga qarab kerakli ilovani tanlaymiz.
-app.get("/", (req, res) => {
-  const role = req.query.role;
-  if (role === "admin" || role === "kitchen" || role === "monitor") {
-    return res.sendFile(path.join(publicDir, "index.html"));
-  }
-  return res.sendFile(path.join(publicDir, "client", "index.html"));
-});
-
 app.use(express.static(publicDir));
 
 const upload = multer({
