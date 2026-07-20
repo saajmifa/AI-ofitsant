@@ -22213,6 +22213,11 @@
     { id: "click", label: "Click", Icon: Smartphone }
   ];
   var PAYMENT_LABELS = Object.fromEntries(PAYMENT_METHODS.map((p) => [p.id, p.label]));
+  var PAYMENT_DETAILS = {
+    karta: { label: "Plastik karta", value: "9860 1701 0943 3160", hint: "Ushbu karta raqamiga to'lovni o'tkazing" },
+    payme: { label: "Payme", value: "+998 97 925 75 72", hint: "Payme ilovasida shu raqamga o'tkazing" },
+    click: { label: "Click", value: "+998 97 925 75 72", hint: "Click ilovasida shu raqamga o'tkazing" }
+  };
   var CALL_REASONS = [
     "Hisobni so'rayman",
     "Suv / salfetka kerak",
@@ -22394,6 +22399,19 @@
     const total = items.reduce((s, i) => s + i.price * i.qty, 0);
     const [showCart, setShowCart] = (0, import_react4.useState)(false);
     const [paymentMethod, setPaymentMethod] = (0, import_react4.useState)("naqd");
+    const [paidConfirmed, setPaidConfirmed] = (0, import_react4.useState)(false);
+    const [copiedField, setCopiedField] = (0, import_react4.useState)(null);
+    const copyPaymentValue = (value, key) => {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(value).then(() => {
+          setCopiedField(key);
+          setTimeout(() => setCopiedField(null), 1500);
+        }).catch(() => {
+        });
+      }
+    };
+    const needsManualPayment = paymentMethod !== "naqd";
+    const canPlaceOrder = items.length > 0 && (!needsManualPayment || paidConfirmed);
     const [showCallModal, setShowCallModal] = (0, import_react4.useState)(false);
     const [callConfirmed, setCallConfirmed] = (0, import_react4.useState)(false);
     const [showHistory, setShowHistory] = (0, import_react4.useState)(false);
@@ -22608,7 +22626,10 @@
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid grid-cols-2 gap-2 mb-3.5", children: PAYMENT_METHODS.map((pm) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
             "button",
             {
-              onClick: () => setPaymentMethod(pm.id),
+              onClick: () => {
+                setPaymentMethod(pm.id);
+                setPaidConfirmed(false);
+              },
               className: `flex items-center gap-2 rounded-xl px-3 py-2 text-xs border ${paymentMethod === pm.id ? "border-amber-500 bg-amber-500/10 text-amber-300" : "border-stone-700 text-stone-400"}`,
               children: [
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)(pm.Icon, { size: 14 }),
@@ -22618,6 +22639,46 @@
             },
             pm.id
           )) }),
+          needsManualPayment && PAYMENT_DETAILS[paymentMethod] && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "mb-3.5 rounded-xl border border-amber-500/40 bg-amber-500/10 p-3", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-amber-300 text-[11px] mb-1.5", children: [
+              PAYMENT_DETAILS[paymentMethod].hint,
+              ":"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex items-center justify-between gap-2 bg-stone-900/60 rounded-lg px-3 py-2 mb-2", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-stone-100 font-mono text-sm tracking-wide", children: PAYMENT_DETAILS[paymentMethod].value }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                "button",
+                {
+                  type: "button",
+                  onClick: () => copyPaymentValue(PAYMENT_DETAILS[paymentMethod].value, paymentMethod),
+                  className: "shrink-0 text-[11px] px-2 py-1 rounded-md bg-amber-500 text-stone-900 font-medium",
+                  children: copiedField === paymentMethod ? "Nusxalandi \u2713" : "Nusxalash"
+                }
+              )
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { className: "text-stone-400 text-[11px] mb-2", children: [
+              "Jami to'lov: ",
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "text-stone-200 font-medium", children: formatSum(total) })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+              "label",
+              {
+                className: "flex items-center gap-2 text-xs text-stone-200 cursor-pointer select-none",
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                    "input",
+                    {
+                      type: "checkbox",
+                      checked: paidConfirmed,
+                      onChange: (e) => setPaidConfirmed(e.target.checked),
+                      className: "w-4 h-4 accent-amber-500"
+                    }
+                  ),
+                  "To'lovni amalga oshirdim"
+                ]
+              }
+            )
+          ] }),
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "flex justify-between text-stone-200 mb-3", children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: "Jami" }),
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "font-medium", children: formatSum(total) })
@@ -22625,15 +22686,17 @@
           /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
             "button",
             {
-              disabled: items.length === 0,
+              disabled: !canPlaceOrder,
               onClick: () => {
                 onPlaceOrder(items, paymentMethod);
                 setShowCart(false);
+                setPaidConfirmed(false);
               },
               className: "w-full bg-amber-500 disabled:bg-stone-700 disabled:text-stone-500 hover:bg-amber-400 text-stone-900 font-medium rounded-full py-3 flex items-center justify-center gap-2",
               children: [
                 /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Printer, { size: 16 }),
-                " Buyurtma berish"
+                " ",
+                needsManualPayment && !paidConfirmed ? "Avval to'lovni tasdiqlang" : "Buyurtma berish"
               ]
             }
           )
